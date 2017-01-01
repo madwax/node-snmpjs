@@ -815,4 +815,3 @@ not, be modified in place.
 [RFC 1157]: http://www.ietf.org/rfc/rfc1157.txt
 [RFC 3416]: http://www.ietf.org/rfc/rfc3416.txt
 [asn1]: https://github.com/mcavage/node-asn1
-[bunyan]: https://github.com/trentm/node-bunyan

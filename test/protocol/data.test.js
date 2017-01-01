@@ -377,7 +377,6 @@ test('octet string encode', function (t) {
 	v.forEach(function (s, i) {
 		var d = data.createData({ type: 'OctetString', value: s });
 		var eb = _encode(d);
-		console.log(eb);
 		t.ok(_cmp_buf(eb, ev[i]), 'encode ' + d.value);
 	});
 

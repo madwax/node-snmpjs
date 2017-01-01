@@ -4,7 +4,6 @@
  */
 
 var snmp = require('./lib/index.js');
-var bunyan = require('bunyan');
 var util = require('util');
 var path = require('path');
 
@@ -17,13 +16,7 @@ if ('snmpinform' == path.basename(process.argv[1]).split('.')[0])
 		client.close();
 	};
 
-var client = snmp.createClient({
-	log: new bunyan({
-		name: typeof (callback) === 'function' ? 'snmpinform'
-							: 'snmptrap',
-		level: 'info'
-	})
-});
+var client = snmp.createClient({ });
 
 var ip = process.argv[2];
 var community = process.argv[3];

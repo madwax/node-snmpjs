@@ -4,12 +4,9 @@
  */
 
 var snmp = require('./lib/index.js');
-var bunyan = require('bunyan');
 var util = require('util');
 
-var client = snmp.createClient({
-	log: new bunyan({ name: 'snmpset', level: 'info' })
-});
+var client = snmp.createClient({ });
 
 var ip = process.argv[2];
 var community = process.argv[3];

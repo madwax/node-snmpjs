@@ -18,8 +18,7 @@ optional, contains any or all of the following members:
 
 	{
 		name: [String],
-		dtrace: [Object (DTraceProvider)],
-		log: [Object (bunyan)]
+		log: [Object with methods info/debug/verbose/error/warn/system( "string" )]
 	}
 
 The interfaces provided by the Agent object are described in detail below.
@@ -28,18 +27,6 @@ The interfaces provided by the Agent object are described in detail below.
 
 If present, the `name` member will be used to name the DTrace provider and to
 decorate log output.  The default value is `'snmpjs'`.
-
-### dtrace
-
-If present, the agent's DTrace probes will be appended to the existing provider
-referenced by the `dtrace` member.  Otherwise, a new provider identified by the
-`name` member (or its default value if absent) will be created.
-
-### log
-
-If present, the agent will add its own child logger to the existing [Bunyan][]
-logger referenced by the `log` member.  Otherwise, a new logger identified by
-the `name` member (or its default value if absent) will be created.
 
 # Agent
 
@@ -88,4 +75,3 @@ arguments.
 ---
 [provider API]: provider.html
 [Node.js]: http://nodejs.org
-[Bunyan]: https://github.com/trentm/node-bunyan

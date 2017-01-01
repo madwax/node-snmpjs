@@ -5,7 +5,6 @@
 
 var snmp = require('./lib/index.js');
 var mib = require('./lib/mib/index.js');
-var bunyan = require('bunyan');
 var fs = require('fs');
 
 var config = process.argv[2] || 'agent.json';
@@ -19,11 +18,7 @@ log_cf = cf.log || {
 	level: 'trace'
 };
 
-log = new bunyan(log_cf);
-
-agent = snmp.createAgent({
-	log: log
-});
+agent = snmp.createAgent({ });
 
 /* XXX MIB configuration */
 
