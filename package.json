@@ -2,13 +2,13 @@
 	"author": "Keith M Wesolowski <keith.wesolowski@joyent.com>",
 	"name": "snmpjs",
 	"description": "Simple Network Management Protocol toolkit",
-	"version": "0.1.8",
+	"version": "0.1.9",
 	"repository": {
 		"type": "git",
-		"url": "git://github.com/joyent/node-snmpjs.git"
+		"url": "git://github.com/madwax/node-snmpjs.git"
 	},
 	"bugs": {
-		"url" : "http://github.com/joyent/node-snmpjs/issues"
+		"url" : "http://github.com/madwax/node-snmpjs/issues"
 	},
 	"main": "lib/index.js",
 	"engines": {
@@ -16,7 +16,7 @@
 	},
 	"dependencies": {
 		"jison": "~0.4",
-		"asn1": "~0.2.2"
+		"asn1": "madwax/node-asn1"
 	},
 	"devDependencies": {
 		"tap": "~0.4"
